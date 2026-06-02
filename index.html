@@ -3,424 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khánh's Portfolio</title>
+    <title>Gia Khánh's Portfolio - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e40af; 
-            --secondary: #3b82f6; 
-            --accent: #0ea5e9; 
-            --bg-color: #f8fafc;
-            --text-main: #0f172a;
-            --text-muted: #64748b;
-            --card-bg: #ffffff;
+            --primary: #1e40af; --secondary: #3b82f6; --accent: #0ea5e9;
+            --bg-color: #f8fafc; --text-main: #0f172a; --text-muted: #64748b; --card-bg: #ffffff;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--card-bg);
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-        }
-        .logo {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-        nav a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
-        nav a:hover {
-            color: var(--primary);
-            text-decoration: underline;
-            text-underline-offset: 5px;
-        }
-
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 60px;
-            padding: 100px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        .avatar-wrapper {
-            position: relative;
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            padding: 10px;
-            background: linear-gradient(135deg, var(--accent), var(--secondary));
-            animation: pulse-border 3s infinite;
-        }
-        .avatar-img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-        }
-        @keyframes pulse-border {
-            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5); }
-            70% { box-shadow: 0 0 0 20px rgba(59, 130, 246, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-        .badge {
-            display: inline-block;
-            background: #e0f2fe;
-            color: var(--secondary);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            margin-bottom: 15px;
-        }
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            color: var(--text-main);
-        }
-        .hero-title span {
-            color: var(--secondary);
-        }
-        
-        .info-box {
-            background: white;
-            padding: 15px 25px;
-            border-radius: 12px;
-            display: flex;
-            gap: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            margin-bottom: 25px;
-            border: 1px solid #e2e8f0;
-        }
-        .info-item {
-            display: flex;
-            flex-direction: column;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
+        header { background-color: var(--card-bg); padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .logo { font-size: 1.2rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 0.95rem; transition: all 0.3s; }
+        nav a:hover, nav a.active { color: var(--primary); font-weight: 700; }
+        .hero { display: flex; align-items: center; justify-content: center; gap: 60px; padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
+        .avatar-wrapper { position: relative; width: 260px; height: 260px; border-radius: 50%; padding: 8px; background: linear-gradient(135deg, var(--accent), var(--secondary)); animation: pulse-border 3s infinite; }
+        .avatar-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 5px solid white; }
+        @keyframes pulse-border { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5); } 70% { box-shadow: 0 0 0 18px rgba(59, 130, 246, 0); } 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); } }
+        .hero-content { max-width: 600px; }
+        .badge { display: inline-block; background: #e0f2fe; color: var(--secondary); padding: 5px 15px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; margin-bottom: 15px; }
+        .hero-title { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+        .hero-title span { color: var(--secondary); }
+        .info-box { background: white; padding: 15px 25px; border-radius: 12px; display: flex; gap: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); margin-bottom: 25px; border: 1px solid #e2e8f0; }
+        .info-item { display: flex; flex-direction: column; }
         .info-label { font-size: 0.8rem; color: var(--text-muted); }
         .info-value { font-weight: 700; color: var(--primary); }
-
-        .hero-desc {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-        }
-        .hero-desc p { margin-bottom: 10px; }
-        
-        .btn {
-            display: inline-block;
-            background: var(--secondary);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
-        }
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
-            background: var(--primary);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .section-header h2 { font-size: 2.5rem; color: var(--text-main); }
-        .section-header p { color: var(--text-muted); }
-
-        .projects {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        
-        .card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            border: 1px solid #f1f5f9;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 4px;
-            background: linear-gradient(90deg, var(--accent), var(--secondary));
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-            transform-origin: left;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            border-color: #e2e8f0;
-        }
+        .projects { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-header h2 { font-size: 2.2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .card { background: var(--card-bg); border-radius: 16px; padding: 25px; box-shadow: 0 8px 25px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--accent), var(--secondary)); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); border-color: #e2e8f0; }
         .card:hover::before { transform: scaleX(1); }
-        
-        .card-icon {
-            width: 50px;
-            height: 50px;
-            background: #eff6ff;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-        .card h3 { font-size: 1.2rem; margin-bottom: 15px; color: var(--text-main); }
-        .card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; flex-grow: 1; }
-        .card-links-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-        .card-link {
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .card-link:hover {
-            color: var(--primary);
-            text-decoration: underline;
-        }
-
-        .summary {
-            background-color: white;
-            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-            background-size: 30px 30px;
-            padding: 80px 20px;
-        }
-        .summary-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .summary-card {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: var(--card-bg);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
+        .card-icon { width: 45px; height: 45px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 15px; }
+        .card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+        .card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; flex-grow: 1; }
+        .card-link { color: var(--secondary); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+        .card-link:hover { color: var(--primary); text-decoration: underline; }
+        .summary { background: white; padding: 60px 20px; text-align: center; }
+        .summary-box { max-width: 800px; margin: 0 auto; background: var(--bg-color); padding: 30px; border-radius: 16px; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+        footer { text-align: center; padding: 25px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid #e2e8f0; background: #fff; }
     </style>
 </head>
 <body>
-
     <header>
-        <div class="logo">Khánh's Portfolio</div>
+        <a href="index.html" class="logo">Gia Khánh Portfolio</a>
         <nav>
             <ul>
-                <li><a href="#gioi-thieu">Giới thiệu</a></li>
-                <li><a href="#du-an">Dự án & Nghiên cứu</a></li>
-                <li><a href="#tong-ket">Tổng kết</a></li>
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="bai1.html">Bài 1</a></li>
+                <li><a href="bai2.html">Bài 2</a></li>
+                <li><a href="bai3.html">Bài 3</a></li>
+                <li><a href="bai4.html">Bài 4</a></li>
+                <li><a href="bai5.html">Bài 5</a></li>
+                <li><a href="bai6.html">Bài 6</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="gioi-thieu" class="hero">
+    <section class="hero">
         <div class="avatar-wrapper">
             <img src="image_59833f.jpg" alt="Trần Mẫu Gia Khánh" class="avatar-img">
         </div>
         <div class="hero-content">
-            <div class="badge">Sinh viên UET - ĐHQGHN</div>
-            <h1 class="hero-title">Mình là<br><span>Trần Mẫu Gia Khánh</span></h1>
-            
+            <div class="badge">Đại học Công nghệ (UET)</div>
+            <h1 class="hero-title">Chào anh em, mình là<br><span>Trần Mẫu Gia Khánh</span></h1>
             <div class="info-box">
-                <div class="info-item">
-                    <span class="info-label">MSSV</span>
-                    <span class="info-value">25021830</span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Lớp</span>
-                    <span class="info-value">K70I - CS4</span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Khoa</span>
-                    <span class="info-value">Khoa học Máy tính</span>
-                </div>
+                <div class="info-item"><span class="info-label">MSSV</span><span class="info-value">25021830</span></div>
+                <div class="info-item"><span class="info-label">Lớp</span><span class="info-value">K70I - CS4</span></div>
+                <div class="info-item"><span class="info-label">Chuyên ngành</span><span class="info-value">Khoa học Máy tính</span></div>
             </div>
-
-            <div class="hero-desc">
-                <p>❤️ <strong>Sở thích & Định hướng:</strong> Đam mê tư duy logic, theo dõi thể thao và hoạt động cộng đồng. Định hướng phát triển sâu về kỹ thuật phần mềm và kiến trúc hệ thống.</p>
-                <p>🎯 <strong>Mục tiêu Portfolio:</strong> Thể hiện tiến trình phát triển năng lực số thông qua học phần VNU1001, lưu trữ các sản phẩm thực hành và minh chứng kỹ năng ứng dụng AI có trách nhiệm.</p>
-            </div>
-            
-            <a href="#du-an" class="btn">Khám phá Dự án ➔</a>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Chào mừng thầy cô và các bạn tới không gian lưu trữ học thuật môn Nhập môn Công nghệ số (VNU1001). Trang web này điều hướng chi tiết qua 6 module bài tập thực hành.</p>
         </div>
     </section>
 
-    <section id="du-an" class="projects">
+    <section class="projects">
         <div class="section-header">
-            <h2>Kho Lưu Trữ Học Thuật</h2>
-            <p>Tập hợp các báo cáo thực hành, nghiên cứu công cụ AI trong môi trường UET.</p>
+            <h2>Hành Trình Dự Án Thành Phần</h2>
+            <p style="color: var(--text-muted);">Bấm vào từng thẻ để chuyển hướng sang nội dung trang chi tiết độc lập.</p>
         </div>
-
         <div class="grid">
-            <!-- Bài 1 -->
             <div class="card">
-                <div>
-                    <div class="card-icon">📁</div>
-                    <h3>Bài 1: Máy tính & Các thiết bị</h3>
-                    <p><strong>Mục tiêu:</strong> Làm chủ hệ điều hành và thiết lập kỹ năng quản lý tệp tin khoa học chuẩn mực.</p>
-                    <p><strong>Quá trình:</strong> Thực hành tạo cây thư mục ThucHanh_TranMauGiaKhanh, thực thi mượt mà các thao tác tạo tệp, sao chép và làm chủ Recycle Bin.</p>
-                </div>
-                <div class="card-links-wrapper">
-                    <a href="tmpx0x1i7_tran-mau-gia-khanh_25021830_tuan-3.docx" class="card-link" download>Tải file minh chứng ↗</a>
-                </div>
+                <div><div class="card-icon">📁</div><h3>Bài 1: Hệ thống & Tệp tin</h3><p>Quản lý và tổ chức cây thư mục lưu trữ khoa học trên máy tính cá nhân.</p></div>
+                <a href="bai1.html" class="card-link">Xem chi tiết trang ➔</a>
             </div>
-
-            <!-- Bài 2 -->
             <div class="card">
-                <div>
-                    <div class="card-icon">🔍</div>
-                    <h3>Bài 2: Khai thác Thông tin (AI)</h3>
-                    <p><strong>Mục tiêu:</strong> Ứng dụng công cụ Elicit/Consensus để tổng hợp tự động tài liệu khoa học.</p>
-                    <p><strong>Quá trình:</strong> Phân tích 5 bài báo tiêu biểu về ứng dụng vật liệu cấu trúc nano Composite Graphene/Silicon tối ưu hóa pin Lithium-ion.</p>
-                </div>
-                <div class="card-links-wrapper">
-                    <a href="tmplugrw5_tranmaugiakhanh_25021830_cnsai.pdf" class="card-link" target="_blank">Xem Báo cáo PDF ↗</a>
-                </div>
+                <div><div class="card-icon">🔍</div><h3>Bài 2: Khai thác Tri thức AI</h3><p>Nghiên cứu tổng quan tài liệu Composite Graphene/Silicon ứng dụng trong pin Lithium-ion bằng Elicit.</p></div>
+                <a href="bai2.html" class="card-link">Xem chi tiết trang ➔</a>
             </div>
-
-            <!-- Bài 3 -->
             <div class="card">
-                <div>
-                    <div class="card-icon">🤖</div>
-                    <h3>Bài 3: Kỹ nghệ Prompt (Prompt Engineering)</h3>
-                    <p><strong>Mục tiêu:</strong> Ứng dụng Prompt để tối ưu tác vụ học tập và tóm tắt tri thức.</p>
-                    <p><strong>Quá trình:</strong> Xây dựng 3 cấp độ Prompt (Cơ bản - Cải tiến - Nâng cao) áp dụng kỹ thuật Sequential, Role và Few-shot cho các chủ đề khoa học phức tạp.</p>
-                </div>
-                <div class="card-links-wrapper">
-                    <a href="tmpxc9zfh_tran-mau-gia-khanh_tuan-5.docx" class="card-link" download>Tải báo cáo Prompt ↗</a>
-                </div>
+                <div><div class="card-icon">🤖</div><h3>Bài 3: Kỹ nghệ Prompt</h3><p>Thiết lập hệ thống Prompt nâng cao phục vụ tác vụ tóm tắt học thuật.</p></div>
+                <a href="bai3.html" class="card-link">Xem chi tiết trang ➔</a>
             </div>
-
-            <!-- Bài 4 -->
             <div class="card">
-                <div>
-                    <div class="card-icon">☁️</div>
-                    <h3>Bài 4: Giao tiếp & Hợp tác số</h3>
-                    <p><strong>Mục tiêu:</strong> Làm chủ hệ sinh thái cộng tác trực tuyến cho bài tập nhóm môn Triết học.</p>
-                    <p><strong>Quá trình:</strong> Phân chia quyền quản trị minh bạch qua Google Drive, theo dõi tiến độ bằng Spreadsheet, và thiết kế tư duy đồng thời trên Miro.</p>
-                </div>
-                <div class="card-links-wrapper">
-                    <a href="tmppladj1_tran-mau-gia-khanh_bai-tap-thuc-hanh-tuan-4.docx" class="card-link" download>Tải báo cáo nhóm ↗</a>
-                </div>
+                <div><div class="card-icon">☁️</div><h3>Bài 4: Cộng tác Không gian Số</h3><p>Quản trị dự án nhóm Triết học qua Google Drive, Sheets và sơ đồ tư duy Miro.</p></div>
+                <a href="bai4.html" class="card-link">Xem chi tiết trang ➔</a>
             </div>
-
-            <!-- Bài 5 -->
             <div class="card">
-                <div>
-                    <div class="card-icon">🎨</div>
-                    <h3>Bài 5: Sáng tạo Nội dung Số</h3>
-                    <p><strong>Mục tiêu:</strong> Ứng dụng AI tạo sinh (Generative AI) đa nền tảng.</p>
-                    <p><strong>Quá trình:</strong> Thiết kế chiến dịch truyền thông "Hội An Xanh". Kết hợp Gemini (kịch bản), Adobe Firefly (tạo hình ảnh) và Canva AI để dàn layout infographic.</p>
-                </div>
-                <div class="card-links-wrapper">
-                    <a href="tmpno5xwp_inforgraphic-hoi-an.pdf" class="card-link" target="_blank">Xem Infographic (PDF) ↗</a>
-                    <a href="tmphnsqp8_inforgraphic.png" class="card-link" target="_blank">Xem Infographic (Ảnh) ↗</a>
-                </div>
+                <div><div class="card-icon">🎨</div><h3>Bài 5: Sáng tạo Nội dung</h3><p>Chiến dịch truyền thông "Hội An Xanh" kết hợp Gemini, Adobe Firefly và Canva.</p></div>
+                <a href="bai5.html" class="card-link">Xem chi tiết trang ➔</a>
             </div>
-
-            <!-- Bài 6 -->
             <div class="card">
-                <div>
-                    <div class="card-icon">⚖️</div>
-                    <h3>Bài 6: Đạo đức & Liêm chính học thuật</h3>
-                    <p><strong>Mục tiêu:</strong> Xây dựng bộ quy tắc ứng xử AI tại UET.</p>
-                    <p><strong>Quá trình:</strong> Phân tích ranh giới giữa "Hỗ trợ hợp lý" và "Gian lận", đề xuất 6 nguyên tắc cốt lõi (Minh bạch, Kiểm chứng kép, Không thay thế tư duy) khi sử dụng AI.</p>
-                </div>
-                <div class="card-links-wrapper">
-                    <a href="tmprgf8p8_bao-cao--tran-mau-gia-khanh--tuan-6.docx" class="card-link" download>Tải báo cáo Liêm chính ↗</a>
-                </div>
+                <div><div class="card-icon">⚖️</div><h3>Bài 6: Liêm chính Học thuật</h3><p>Xây dựng cẩm nang nguyên tắc đạo đức và ranh giới sử dụng AI tại UET.</p></div>
+                <a href="bai6.html" class="card-link">Xem chi tiết trang ➔</a>
             </div>
         </div>
     </section>
 
-    <section id="tong-ket" class="summary">
-        <div class="section-header">
-            <h2>Tổng Kết Hành Trình</h2>
-            <p>Chiêm nghiệm cá nhân từ học phần Công nghệ số (VNU1001)</p>
-        </div>
-        <div class="summary-container">
-            <div class="summary-card">
-                <h3 style="color: var(--primary); margin-bottom: 15px;">💡 Bài Học & Điểm Tâm Đắc Nhất</h3>
-                <p>Sự chuyển đổi lớn nhất của mình là về mặt tư duy cốt lõi: <strong>AI không phải là công cụ làm hộ, mà là một "Trợ lý/Tổng biên tập"</strong>. Việc sử dụng thành thạo các công cụ đã giải phóng bản thân khỏi các tác vụ thủ công lặp đi lặp lại để tái đầu tư vào việc phát triển tư duy thuật toán sâu sắc.</p>
-            </div>
-
-            <div class="summary-card">
-                <h3 style="color: #e11d48; margin-bottom: 15px;">⚠️ Thách Thức Kỹ Thuật & Đạo Đức</h3>
-                <p>Trong quá trình làm việc, rủi ro lớn nhất là đối mặt với <strong>"Ảo giác số liệu" (Hallucination)</strong> từ các mô hình ngôn ngữ lớn. Để khắc phục, mình đã thiết lập một quy trình <em>Kiểm chứng kép (Cross-check)</em> khắt khe đối với tài liệu học thuật theo đúng tiêu chuẩn liêm chính của UET.</p>
-            </div>
+    <section class="summary">
+        <div class="summary-box">
+            <h3 style="color: var(--primary); margin-bottom: 10px;">🌟 Tổng kết học phần</h3>
+            <p style="color: var(--text-main); font-size: 0.95rem;">Học phần giúp mình định hình rõ tư duy: AI đóng vai trò một trợ lý đắc lực thúc đẩy hiệu suất công việc, nhưng tư duy độc lập và trách nhiệm kiểm chứng thông tin luôn thuộc về người kỹ sư công nghệ.</p>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Trần Mẫu Gia Khánh. Academic Portfolio - VNU1001.</p>
-    </footer>
-
+    <footer><p>&copy; 2026 Trần Mẫu Gia Khánh - MSSV: 25021830. Built with HTML/CSS Multipage.</p></footer>
 </body>
 </html>
